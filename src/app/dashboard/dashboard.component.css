@@ -1,0 +1,21 @@
+.totals{
+  display: flex;
+  flex-direction: row;
+  place-content: center center;
+}
+.numbers {
+  flex-direction: column;
+  place-content: center center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+}
+.fonts {
+  font-size: 6;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+

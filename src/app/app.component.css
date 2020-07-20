@@ -1,0 +1,32 @@
+.nav-div {
+  display: flex;
+  width: 90%;
+
+  place-content: flex-start;
+
+}
+
+.search-div {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  background-color: antiquewhite;
+  }
+
+.search-input {
+  font-size: medium;
+  color: rgb(47, 55, 61);
+  display: flex;
+  height: 30px;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.data-div {
+  display: flex;
+  width: 10%;
+  place-content: center end;
+}
+
+
+

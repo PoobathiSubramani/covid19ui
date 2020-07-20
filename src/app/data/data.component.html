@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-spinner *ngIf="dataLoadProcessIsRequested && dataLoadProcessInProgress" ></mat-spinner>
+  <form #form>
+    <mat-form-field>
+      <mat-label>Enter unlock key</mat-label>
+      <input matInput type="password" #pwd name="dataUpdatePwd" required [(ngModel)]="myKey">
+    </mat-form-field>
+    <br>
+    <button mat-button color="primary" (click)="onEnterUnlockKeys()">Enter</button>
+    <button mat-button *ngIf="unlock" color="warn" (click)="onDataLoadRequest()">Update Data</button>
+    <!--<button mat-button *ngIf="unlock" color="primary"  (click)="onLoadBatchData()">Load Batch Data</button>-->
+  </form>
+</mat-card>
+
+<!--
+  2020/05/17 Boo - i'm focusing only on the data part.
+  On the click event of the Load Data button, the raw covid json data will get truncate & load in the db.
+  refining this to work based on the password need to be done later.
+-->

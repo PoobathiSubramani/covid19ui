@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="nav-div">
+      <button mat-button color='accent' routerLink='dashboard'>
+        <i class="fa fa-line-chart" aria-hidden="true" style="margin-right: 0.5rem;"></i>
+        Dashboard
+
+      </button>
+    </div>
+    <!--<div class="search-div">
+      <input matInput placeholder= "Search" class="search-input" [(ngModel)]="searchString" (keyup.enter)="onSearch()">
+    </div>-->
+    <div class="data-div" style="align-items: center;">
+      <button mat-button routerLink='admin'>
+        <i class="fa fa-user" aria-hidden="true" style="margin-right: 0.5rem;"></i>
+        Admin
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<main>
+  <router-outlet></router-outlet>
+</main>

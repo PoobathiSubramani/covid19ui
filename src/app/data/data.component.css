@@ -1,0 +1,28 @@
+mat-card {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+ }
+
+ mat-form-field {
+   width: 100%;
+ }
+
+ mat-label {
+   font-size: 8pt;
+ }
+
+ mat-button {
+   font-size: 8pt;
+ }
+
+ mat-expansion-panel {
+   width: 73%;
+   margin: auto;
+ }
+
+ mat-spinner {
+   display: flex;
+   margin: auto;
+ }

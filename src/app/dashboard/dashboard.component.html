@@ -1,0 +1,48 @@
+<form #form>
+  <mat-form-field color='primary' style="width: 100%; margin-top: 1rem;" (click)="clearSearchText()">
+    <mat-label style="margin-left: 1rem;">Search using State name. Ex: Tamil Nadu</mat-label>
+      <input matInput
+      style="margin-left: 1rem;"
+      #srchstr
+      name="searchString"
+      type="search"
+      [(ngModel)]="searchString"
+      [matAutocomplete]="autoComplete"
+      [formControl]="myControl">
+    <mat-autocomplete #autoComplete="matAutocomplete" [displayWith]="displayStateName">
+      <!-- to display the name of the state from the state array, use [displayWith] directive-->
+      <!--<mat-option *ngFor="let state of stateNamesAndCodes" [value]="state">-->
+      <mat-option *ngFor="let stateObj of filteredStates | async" [value]="stateObj" (onSelectionChange)="onGetDashboardData(stateObj)">
+        {{stateObj}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+<br>
+<div class="totals">
+  <div class="numbers">
+    <div style="color: red;">
+      <h1>{{totalConfirmd}}</h1>
+      <p class="fonts">Confirmed</p>
+    </div>
+  </div>
+  <div class="numbers">
+    <div style="color: green;">
+      <h1>{{totalRecovered}}</h1>
+      <p class="fonts">Recovered</p>
+    </div>
+  </div>
+  <div class="numbers">
+    <div style="color: black;">
+      <h1>{{totalDeceased}}</h1>
+      <p class="fonts">Deceased</p>
+    </div>
+  </div>
+
+</div>
+<br>
+<!--<mat-card class="card-statelevel" *ngIf=(!searchString)>-->
+<mat-card>
+  <svg></svg>
+</mat-card>
+
